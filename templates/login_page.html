@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+<form method="post">
+
+    <input type="text" placeholder="Enter Username" name="username" required>
+
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <button type="submit">Login</button>
+
+    Forgot <a href="/reset">password?</a>
+
+    {% if message %}
+        <h2> {{ message }}</h2>
+    {% endif %}
+</form>
+</body>
+</html>

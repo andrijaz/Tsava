@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reset password</title>
+</head>
+<body>
+<form action="/reset" method="post">
+    <input type="email" name="email" placeholder="Email to reset" required/>
+    <button type="submit">Reset</button>
+   {% if message %}
+    {{ message }}
+    {% endif %}
+
+{% if reset_url %}
+    <a href={{ reset_url }}> go to reset page</a>
+{% endif %}
+</form>
+</body>
+</html>
